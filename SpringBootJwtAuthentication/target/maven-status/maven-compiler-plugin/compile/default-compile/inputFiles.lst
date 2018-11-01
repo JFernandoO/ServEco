@@ -1,0 +1,17 @@
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\repository\RoleRepository.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\controller\AuthRestAPIs.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\security\services\UserDetailsServiceImpl.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\model\User.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\message\request\LoginForm.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\security\jwt\JwtAuthTokenFilter.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\repository\UserRepository.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\security\jwt\JwtAuthEntryPoint.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\SpringBootJwtAuthenticationApplication.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\security\jwt\JwtProvider.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\controller\TestRestAPIs.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\security\WebSecurityConfig.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\security\services\UserPrinciple.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\message\request\SignUpForm.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\model\RoleName.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\message\response\JwtResponse.java
+F:\Fernando\Projects\Java\Ecosolida\S01\ServEco\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\model\Role.java
