@@ -41,7 +41,7 @@ public class OrderDetail {
 	    @JoinColumn(name="order_id", referencedColumnName="order_id")
 	    private Order order;
 	 	
-	
+	public OrderDetail() {}
 
 	public OrderDetail(String idProduct, Double quantity, Double unitPrice, int discount, Double total, Order order) {
 		

@@ -37,16 +37,23 @@ public class OrderController {
 	@PostMapping(value = "/orders/create")
 	public Order postOrder(@RequestBody Order order) {
 
+		System.out.println("Add Order...");
+		
 		Order o = new Order(
-				/*order.getNamePerson(),
-				order.getTypePerson(), 
-				order.getNumberPerson(),
+				order.getAddress1(), 
+				order.getAptounit(),
+				order.getSuburb(),
+				order.getCity(),
 				order.getState(),
-				order.getTotalQuantity(),
-				order.getTotalCost(),
-				order.getAddress(),
+				order.getZipCode(),
+				order.getCreateOrder(),
 				order.getDateOrder(),
-				order.getTimeOrder()*/
+				order.getTimeOrder(),
+				order.getObservations(),
+				order.getPhoneNumber1(),
+				order.getPhoneNumber2(),
+				order.getEmail(),
+				order.getUserId()
 				);
 				
 		HashSet<OrderDetail> details = new HashSet<OrderDetail>();
