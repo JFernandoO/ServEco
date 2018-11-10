@@ -1,7 +1,9 @@
 package com.grokonez.jwtauthentication.controller;
 
+import java.io.Console;
+import java.util.ArrayList;
 import java.util.HashSet;
-
+import java.util.List;
 import java.util.Set;
 
 import javax.validation.Valid;
@@ -15,6 +17,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,10 +52,21 @@ public class AuthRestAPIs {
 
     @Autowired
     JwtProvider jwtProvider;
+    
+    @GetMapping("/users")
+	public List<User> getAllUsers() {
+		System.out.println("Get all Users...");
+
+		List<User> users = new ArrayList<>();
+		userRepository.findAll().forEach(users::add);
+
+		return users;
+	}
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginForm loginRequest) {
-
+    	System.out.println("Login...");
+    	
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getUsername(),

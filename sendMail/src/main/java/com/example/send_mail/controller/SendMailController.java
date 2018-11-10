@@ -31,11 +31,9 @@ public class SendMailController {
     }
     
     @PostMapping(value = "/sendMailEco")
-	public SimpleMailMessage postMail(@RequestBody SimpleMailMessage mail) {
+	public String postMail(@RequestBody SimpleMailMessage mail) {
     
-    	//String message = "\n\n Datos de contacto: " + "\nNombre: " + mail.name + "\nE-mail: " + mail.mail;
-        mailService.sendMail("icarojf@gmail.com",mail.getTo()[0],mail.getSubject(),mail.getText());
-
-    	return mail;
+    	mailService.sendMail("icarojf@gmail.com",mail.getTo()[0],mail.getSubject(),mail.getText());
+    	return "send_mail_view";
     }
 }

@@ -1,9 +1,16 @@
 package com.javasampleapproach.springrest.mysql.controller;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import org.omg.CORBA.portable.OutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -65,6 +72,48 @@ public class OrderController {
 	    o.setOrderDetails(details);
 	    	    
 		Order _order = repository.save(o);
+		
+		//Send notification
+		try {
+
+			URL url = new URL("http://localhost:8091/sendMailEco");
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setDoOutput(true);
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "application/json");
+
+			String input = "{\"to\":\"sephiroth.125@hotmail.com\",\"subject\":\"Evento Ecosolida\",\"text\":\"-datos-\"}";
+
+			java.io.OutputStream os = conn.getOutputStream();
+			os.write(input.getBytes());
+			os.flush();
+			int a1=conn.getResponseCode();
+			int a2 = HttpURLConnection.HTTP_OK;
+			if (a1 != a2) {
+				throw new RuntimeException("Failed : HTTP error code : "
+					+ conn.getResponseCode());
+			}
+
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					(conn.getInputStream())));
+
+			String output;
+			System.out.println("Output from Server .... \n");
+			while ((output = br.readLine()) != null) {
+				System.out.println(output);
+			}
+
+			conn.disconnect();
+
+		  } catch (MalformedURLException e) {
+			  System.out.println("Output error .... \n"+e.getMessage());
+			//e.printStackTrace();
+
+		  } catch (IOException e) {
+			  System.out.println("Output error  .... \n"+e.getMessage());	
+			//e.printStackTrace();
+
+		 }
 		
 		return _order;
 	}
